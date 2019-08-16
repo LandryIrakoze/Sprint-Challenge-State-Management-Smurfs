@@ -33,12 +33,12 @@ export const getData = () => {
     }
 }
 
-export const addSmurf = () => {
+export const addSmurf = (smurfData) => {
     return dispatch => {
         console.log('addSmurf_invoked');
         dispatch({ type: SMURF_ADD_START });
         axios
-            .post('http://localhost:3333/smurfs')
+            .post('http://localhost:3333/smurfs', smurfData)
             .then(res => {
                 console.log('res', res);
                 dispatch({ type: SMURF_ADD_SUCCESS, payload: res.data });
@@ -49,6 +49,8 @@ export const addSmurf = () => {
             })
     }
 }
+
+//EDIT THESE LATER 
 
 export const deleteSmurf = () => {
     return dispatch => {
