@@ -5,9 +5,9 @@ const Smurfs = (props) => {
 
     return (
         <>
-            <p>name: {info.name}</p>
-            <p>age: {info.age}</p>
-            <p>height: {info.height}</p>
+            <p>name: {info && info.name}</p>
+            <p>age: {info && info.age}</p>
+            <p>height: {info && info.height}</p>
         </>
     )
 }

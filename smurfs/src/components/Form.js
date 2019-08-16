@@ -13,7 +13,7 @@ const Form = (props) => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        props.addSmurf(smurf)
+        props.addSmurf(smurf);
     }
 
     return (

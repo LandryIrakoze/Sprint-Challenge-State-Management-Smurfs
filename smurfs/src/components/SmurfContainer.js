@@ -16,7 +16,8 @@ const SmurfContainer = (props) => {
 const mapStateToProps = state => {
     console.log('smurfcontainer state', state);
     return {
-        smurfs: state.smurfs
+        smurfs: state.smurfs,
+        isLoading: state.isLoading
     }
 }
 
