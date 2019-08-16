@@ -35,7 +35,7 @@ const Form = (props) => {
     )
 }
 const mapStateToProps = state => {
-    console.log('Form State', state);
+    console.log('State', state);
     return {
         smurfs: state.smurfs
     }

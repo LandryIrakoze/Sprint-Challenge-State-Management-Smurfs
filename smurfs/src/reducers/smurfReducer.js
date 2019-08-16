@@ -59,6 +59,25 @@ export const smurfReducer = (state = initialState, action) => {
                 isLoading: false,
                 error: action.payload
             }
+        case SMURF_DELETE_START:
+            return {
+                ...state,
+                isLoading: true,
+                error: ''
+            }
+        case SMURF_DELETE_SUCCESS:
+            return {
+                ...state,
+                isLoading: false,
+                error: '',
+                smurfs: state.smurfs.filter(smurf => smurf.id !== action.payload)
+            }
+        case SMURF_DELETE_FAILURE:
+            return {
+                ...state,
+                isLoading: false,
+                error: action.payload
+            }
         default:
             return state;
     }
